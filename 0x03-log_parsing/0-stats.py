@@ -15,11 +15,11 @@ if __name__ == '__main__':
                 print('{}: {}'.format(key, status_codes[key]))
 
     def parse_line(line):
-        """ Parses the line for the required metrics """
+        """ Checks the line for matches """
         global file_size
         try:
             parts = line.split()
-            if len(parts) < 9:
+            if len(parts) < 7:
                 return
             # Extract file size and status code
             size = int(parts[-1])
